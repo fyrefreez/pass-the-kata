@@ -8,9 +8,14 @@ namespace FizzPop
         private readonly FizzPopper _fizzPopper = new FizzPopper();
 
         [TestMethod]
-        public void ABoringNumberIsBoring()
+        public void NumberNotDivisableBySevenOrNine_ReturnsSameNumber()
         {
             Assert.AreEqual(_fizzPopper[5], "5");
+        }
+
+        [TestMethod]
+        public void NumberDivisableBySeven_ReturnsFizz()
+        {
         }
     }
 }
