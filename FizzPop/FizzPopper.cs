@@ -4,7 +4,19 @@
     {
         public string this[int i] 
         {
-            get { return i.ToString(); }
+            get
+            {
+                string result = "";
+                if (i%7 == 0)
+                {
+                    result = "Fizz";
+                }
+                if (i%9 == 0)
+                {
+                    
+                }
+                return i.ToString();
+            }
         }
     }
 }
