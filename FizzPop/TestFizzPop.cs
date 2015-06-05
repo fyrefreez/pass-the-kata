@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 namespace FizzPop
 {
@@ -29,6 +30,12 @@ namespace FizzPop
         public void NumberDivisableBySevenAndNine_ReturnsFizzPop()
         {
             Assert.AreEqual(_fizzPopper[63], "FizzPop");
+        }
+
+        [TestMethod]
+        public void RangeMustCountTheRange()
+        {
+            Assert.AreEqual(100, _fizzPopper.Range(1, 100).Count());
         }
     }
 }
