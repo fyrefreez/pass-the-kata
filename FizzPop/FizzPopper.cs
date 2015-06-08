@@ -18,17 +18,17 @@ namespace FizzPop
             get
             {
                 string result = i.ToString(CultureInfo.InvariantCulture);
-                if (i%7 == 0)
+                if (i%7 == 0 && result.IndexOf('9') > 0)
                 {
-                    result = "Fizz";
+                    return "FizzPop";
                 }
-                if (i.ToString().IndexOf('9') > 0)
+                if (result.IndexOf('9') > 0)
                 {
-                    result = "Pop";
+                    return "Pop";
                 }
-                if (i%7 == 0 && i%9 == 0)
+                if (i % 7 == 0)
                 {
-                    result = "FizzPop";
+                    return "Fizz";
                 }
                 if (result == i.ToString(CultureInfo.InvariantCulture))
                     return i.ToString(CultureInfo.InvariantCulture);

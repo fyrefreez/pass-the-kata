@@ -11,7 +11,7 @@ namespace FizzPop
         [TestMethod]
         public void NumberNotDivisableBySevenOrNotContainingNine_ReturnsNumber()
         {
-            Assert.AreEqual(_fizzPopper[5], "81");
+            Assert.AreEqual(_fizzPopper[81], "81");
         }
 
         [TestMethod]
