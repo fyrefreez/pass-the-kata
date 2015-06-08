@@ -9,9 +9,9 @@ namespace FizzPop
         private readonly FizzPopper _fizzPopper = new FizzPopper();
 
         [TestMethod]
-        public void NumberNotDivisableBySevenOrNine_ReturnsSameNumber()
+        public void NumberNotDivisableBySevenOrNotContainingNine_ReturnsNumber()
         {
-            Assert.AreEqual(_fizzPopper[5], "5");
+            Assert.AreEqual(_fizzPopper[5], "81");
         }
 
         [TestMethod]
@@ -21,15 +21,21 @@ namespace FizzPop
         }
 
         [TestMethod]
-        public void NumberDivisableByNine_ReturnsPop()
+        public void NumberContainingNine_ReturnsPop()
         {
-            Assert.AreEqual(_fizzPopper[9], "Pop");
+            Assert.AreEqual(_fizzPopper[19], "Pop");
         }
 
         [TestMethod]
-        public void NumberDivisableBySevenAndNine_ReturnsFizzPop()
+        public void NumberDivisableBySevenAndContainingNine_ReturnsFizzPop()
         {
-            Assert.AreEqual(_fizzPopper[63], "FizzPop");
+            Assert.AreEqual(_fizzPopper[49], "FizzPop");
+        }
+
+        [TestMethod]
+        public void NumberDivisableBySevenAndDiviableNineAndNotContainingNine_ReturnsFizz()
+        {
+            Assert.AreEqual(_fizzPopper[63], "Fizz");
         }
 
         [TestMethod]

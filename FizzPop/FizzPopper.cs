@@ -22,7 +22,7 @@ namespace FizzPop
                 {
                     result = "Fizz";
                 }
-                if (i%9 == 0)
+                if (i.ToString().IndexOf('9') > 0)
                 {
                     result = "Pop";
                 }
