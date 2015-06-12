@@ -30,9 +30,9 @@ namespace FizzPop
                 {
                     return "Fizz";
                 }
-                if (result == i.ToString(CultureInfo.InvariantCulture))
-                    return i.ToString(CultureInfo.InvariantCulture);
-                else return result;
+                return result == i.ToString(CultureInfo.InvariantCulture) 
+                    ? i.ToString(CultureInfo.InvariantCulture) 
+                    : result;
             }
         }
     }
