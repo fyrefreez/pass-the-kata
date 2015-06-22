@@ -13,12 +13,12 @@ namespace FizzPop
             }
         }
 
-        public string this[int i] 
+        public string this[int i]
         {
             get
             {
                 string result = i.ToString(CultureInfo.InvariantCulture);
-                if (i%7 == 0 && result.IndexOf('9') > 0)
+                if (i % 7 == 0 && result.IndexOf('9') > 0)
                 {
                     return "FizzPop";
                 }
@@ -30,9 +30,7 @@ namespace FizzPop
                 {
                     return "Fizz";
                 }
-                return result == i.ToString(CultureInfo.InvariantCulture) 
-                    ? i.ToString(CultureInfo.InvariantCulture) 
-                    : result;
+                return result;
             }
         }
     }

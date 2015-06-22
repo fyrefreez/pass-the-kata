@@ -39,6 +39,12 @@ namespace FizzPop
         }
 
         [TestMethod]
+        public void NegativeNumberDivisableBySevenAndContainingNine_ReturnsFizzPop()
+        {
+            Assert.AreEqual(_fizzPopper[-49], "FizzPop");
+        }
+
+        [TestMethod]
         public void RangeMustCountTheRange()
         {
             Assert.AreEqual(100, _fizzPopper.Range(1, 100).Count());
